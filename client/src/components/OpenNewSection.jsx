@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import {
-    getAllCourses
+    getAllCourses,
+    createOffering
 } from '../services/api';
 
 const CURRENT_TERM = '2026-1';
@@ -13,6 +14,7 @@ const OpenNewSection = () => {
 
     const [courses, setCourses] = useState([]);
     const [error, setError] = useState('');
+    const [successMsg, setSuccessMsg] = useState('');
 
     const [formData, setFormData] = useState({
         courseId: '',
@@ -67,19 +69,59 @@ const OpenNewSection = () => {
     };
 
 
+    const handleSubmit = async (e) => {
+
+        e.preventDefault();
+
+        setError('');
+        setSuccessMsg('');
+
+        try {
+
+            await createOffering({
+                ...formData,
+                seats: Number(formData.seats)
+            });
+
+            setSuccessMsg(
+                'New course section created successfully'
+            );
+
+            setFormData({
+                courseId: '',
+                term: CURRENT_TERM,
+                section: '',
+                day: '',
+                startTime: '',
+                endTime: '',
+                room: '',
+                instructor: '',
+                seats: ''
+            });
+
+        } catch (err) {
+
+            setError(
+                err.response?.data?.message ||
+                'Failed to create offering'
+            );
+
+        }
+
+    };
+
+
     return (
         <div>
 
             <div className="page-title">
 
                 <div>
-
                     <h2>Open New Section</h2>
 
                     <p>
                         Create a new course offering for {CURRENT_TERM}
                     </p>
-
                 </div>
 
             </div>
@@ -92,9 +134,16 @@ const OpenNewSection = () => {
             )}
 
 
+            {successMsg && (
+                <div className="alert success">
+                    {successMsg}
+                </div>
+            )}
+
+
             <div className="form-card">
 
-                <form>
+                <form onSubmit={handleSubmit}>
 
                     <div className="form-grid">
 
@@ -103,9 +152,7 @@ const OpenNewSection = () => {
 
                         <div className="form-group">
 
-                            <label>
-                                Course
-                            </label>
+                            <label>Course</label>
 
                             <select
                                 name="courseId"
@@ -138,9 +185,7 @@ const OpenNewSection = () => {
 
                         <div className="form-group">
 
-                            <label>
-                                Term
-                            </label>
+                            <label>Term</label>
 
                             <input
                                 name="term"
@@ -155,9 +200,7 @@ const OpenNewSection = () => {
 
                         <div className="form-group">
 
-                            <label>
-                                Section
-                            </label>
+                            <label>Section</label>
 
                             <input
                                 name="section"
@@ -174,9 +217,7 @@ const OpenNewSection = () => {
 
                         <div className="form-group">
 
-                            <label>
-                                Day
-                            </label>
+                            <label>Day</label>
 
                             <select
                                 name="day"
@@ -205,9 +246,7 @@ const OpenNewSection = () => {
 
                         <div className="form-group">
 
-                            <label>
-                                Start Time
-                            </label>
+                            <label>Start Time</label>
 
                             <input
                                 type="time"
@@ -224,9 +263,7 @@ const OpenNewSection = () => {
 
                         <div className="form-group">
 
-                            <label>
-                                End Time
-                            </label>
+                            <label>End Time</label>
 
                             <input
                                 type="time"
@@ -243,9 +280,7 @@ const OpenNewSection = () => {
 
                         <div className="form-group">
 
-                            <label>
-                                Room
-                            </label>
+                            <label>Room</label>
 
                             <input
                                 name="room"
@@ -262,9 +297,7 @@ const OpenNewSection = () => {
 
                         <div className="form-group">
 
-                            <label>
-                                Instructor
-                            </label>
+                            <label>Instructor</label>
 
                             <input
                                 name="instructor"
@@ -281,9 +314,7 @@ const OpenNewSection = () => {
 
                         <div className="form-group">
 
-                            <label>
-                                Maximum Seats
-                            </label>
+                            <label>Maximum Seats</label>
 
                             <input
                                 type="number"
