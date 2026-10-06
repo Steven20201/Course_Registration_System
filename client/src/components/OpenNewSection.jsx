@@ -17,7 +17,7 @@ const OpenNewSection = () => {
         instructor: '',
         seats: ''
     });
-
+//comit
 };
 
 export default OpenNewSection;
