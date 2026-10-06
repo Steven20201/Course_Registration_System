@@ -1,34 +1,77 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AuthProvider } from './context/AuthContext';
-import Login from './pages/Login';
+import { AuthProvider } from "./context/AuthContext";
+
+import Login from "./pages/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminDashboard from "./pages/AdminDashboard";
+import AdvisorDashboard from "./pages/AdvisorDashboard";
+import StudentDashboard from "./pages/StudentDashboard";
+
+import OpenNewSection from "./components/OpenNewSection";
+import CourseOfferings from "./components/CourseOfferings";
+import StudentEligibility from "./components/StudentEligibility";
 
 function App() {
-  return (
-    <AuthProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path= "/" element = {<Login />} />
-          <Route path = "/admin" element = {
-            <ProtectedRoute allowedRole = "admin">
-               <AdminDashboard />
-            </ProtectedRoute>
-          } />
-          <Route path = "/advisor" element = {
-            <ProtectedRoute allowedRole = "advisor">
-             <div>Advisor Dashboard (coming soon)</div>
-            </ProtectedRoute>
-          } />
-          <Route path = "/student" element = {
-            <ProtectedRoute allowedRole = "student">
-               <div>Student Dashboard (coming soon)</div>
-            </ProtectedRoute>
-          } />
-        </Routes>
-      </BrowserRouter>
-    </AuthProvider>
-  )
+    return (
+        <AuthProvider>
+            <BrowserRouter>
+                <Routes>
+
+                    {/* Login */}
+                    <Route path="/" element={<Login />} />
+
+
+                    {/* Admin */}
+                    <Route
+                        path="/admin"
+                        element={
+                            <ProtectedRoute allowedRole="admin">
+                                <AdminDashboard />
+                            </ProtectedRoute>
+                        }
+                    />
+
+
+                    {/* Advisor */}
+                    <Route
+                        path="/advisor"
+                        element={
+                            <ProtectedRoute allowedRole="advisor">
+                                <AdvisorDashboard />
+                            </ProtectedRoute>
+                        }
+                    >
+                        <Route
+                            path="offerings"
+                            element={<CourseOfferings />}
+                        />
+
+                        <Route
+                            path="open-section"
+                            element={<OpenNewSection />}
+                        />
+
+                        <Route
+                            path="eligibility"
+                            element={<StudentEligibility />}
+                        />
+                    </Route>
+
+
+                    {/* Student */}
+                    <Route
+                        path="/student"
+                        element={
+                            <ProtectedRoute allowedRole="student">
+                                <StudentDashboard />
+                            </ProtectedRoute>
+                        }
+                    />
+
+                </Routes>
+            </BrowserRouter>
+        </AuthProvider>
+    );
 }
 
 export default App;
