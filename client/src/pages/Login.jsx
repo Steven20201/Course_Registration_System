@@ -1,5 +1,7 @@
 
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import '../style/Login.css';
 
 const Login = () => {
@@ -8,9 +10,28 @@ const Login = () => {
     const [error, setError] = useState('');
     const [showPassword, setShowPassword] = useState(false);
 
-    const handleSubmit = (e) => {
+    const { login } = useAuth();
+    const navigate = useNavigate();
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        setError('Login authentication is not connected yet');
+        setError('');
+
+        try {
+            const user = await login(email, password);
+
+            if (user.role === 'admin') {
+                navigate('/admin');
+            } else if (user.role === 'advisor') {
+                navigate('/advisor');
+            } else {
+                navigate('/student');
+            }
+        } catch (err) {
+            setError(
+                err.response?.data?.message || 'Login failed'
+            );
+        }
     };
 
     return (
@@ -34,10 +55,14 @@ const Login = () => {
 
                         {/* EMAIL */}
                         <div className="input-group">
+
                             <label>Email</label>
 
                             <div className="input-wrapper">
-                                <span className="input-icon">✉</span>
+
+                                <span className="input-icon">
+                                    ✉
+                                </span>
 
                                 <input
                                     type="email"
@@ -48,18 +73,28 @@ const Login = () => {
                                     }
                                     required
                                 />
+
                             </div>
+
                         </div>
 
                         {/* PASSWORD */}
                         <div className="input-group">
+
                             <label>Password</label>
 
                             <div className="input-wrapper">
-                                <span className="input-icon">🔒</span>
+
+                                <span className="input-icon">
+                                    🔒
+                                </span>
 
                                 <input
-                                    type={showPassword ? 'text' : 'password'}
+                                    type={
+                                        showPassword
+                                            ? 'text'
+                                            : 'password'
+                                    }
                                     placeholder="Enter your password"
                                     value={password}
                                     onChange={(e) =>
@@ -77,7 +112,9 @@ const Login = () => {
                                 >
                                     {showPassword ? '🙈' : '👁️'}
                                 </button>
+
                             </div>
+
                         </div>
 
                         {/* ERROR */}
