@@ -5,6 +5,13 @@ import '../style/Login.css';
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setError('Login authentication is not connected yet');
+    };
 
     return (
         <div className="login-page">
@@ -23,7 +30,7 @@ const Login = () => {
                         Sign in to your course registration portal
                     </p>
 
-                    <form onSubmit={(e) => e.preventDefault()}>
+                    <form onSubmit={handleSubmit}>
 
                         {/* EMAIL */}
                         <div className="input-group">
@@ -36,7 +43,9 @@ const Login = () => {
                                     type="email"
                                     placeholder="Enter your email address"
                                     value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
+                                    onChange={(e) =>
+                                        setEmail(e.target.value)
+                                    }
                                     required
                                 />
                             </div>
@@ -50,14 +59,33 @@ const Login = () => {
                                 <span className="input-icon">🔒</span>
 
                                 <input
-                                    type="password"
+                                    type={showPassword ? 'text' : 'password'}
                                     placeholder="Enter your password"
                                     value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
+                                    onChange={(e) =>
+                                        setPassword(e.target.value)
+                                    }
                                     required
                                 />
+
+                                <button
+                                    type="button"
+                                    className="show-password"
+                                    onClick={() =>
+                                        setShowPassword(!showPassword)
+                                    }
+                                >
+                                    {showPassword ? '🙈' : '👁️'}
+                                </button>
                             </div>
                         </div>
+
+                        {/* ERROR */}
+                        {error && (
+                            <div className="error-message">
+                                {error}
+                            </div>
+                        )}
 
                         {/* LOGIN BUTTON */}
                         <button
