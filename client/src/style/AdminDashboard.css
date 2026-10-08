@@ -1,0 +1,409 @@
+#root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.admin-layout {
+    min-width: 100vh;
+    display: flex;
+    background: #0b1425;
+    color: #e5edf9;
+    font-family: monospace;
+}
+
+.admin-sidebar {
+    width: 230px;
+    min-height: 100vh;
+    background: #101d33;
+    border-right: 1px solid #1e3354;
+    padding: 24px 14px;
+    box-sizing: border-box;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 10px 30px;
+}
+
+
+.sidebar-item {
+    text-align: left;
+    padding: 13px 14px;
+    border-radius: 8px;
+    color: #a9bad4;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 14px;
+}
+
+.sidebar-item:hover {
+    background: #172b4b;
+    color: white;
+}
+
+.sidebar-item.active {
+    background: #1d4ed8;
+    color: white;
+}
+
+.admin-main {
+    flex: 1; 
+    padding: 26px;
+    min-width: 0;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.admin-title h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #f5f8ff;
+}
+
+.admin-title p {
+    margin: 6px 0 0;
+    color: #91a6c4;
+    font-size: 14px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #d7e2f2;
+}
+
+.profile-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #263f67;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout-btn {
+    background: transparent;
+    border: 1px solid #2d4669;
+    color: #dbe7f8;
+    padding: 10px 17px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background: #172b4b;
+}
+
+.role-name {
+    text-align: center !important;
+}
+
+.alert {
+    padding: 12px 15px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+.alert-error {
+    background: #451a1a;
+    border: 1px solid #7f1d1d;
+    color: #fca5a5;
+}
+
+.alert-success {
+    background: #123b2b;
+    border: 1px solid #166534;
+    color: #86efac;
+}
+
+.user-toolbar {
+    background: #12223b;
+    border: 1px solid #1d3557;
+    border-radius: 9px;
+    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.filter-group label {
+    color: #b6c7df;
+    font-size: 14px;
+}
+
+.filter-group select {
+    background: #102039;
+    color: #dce8f7;
+    border: 1px solid #294466;
+    padding: 9px 35px 9px 12px;
+    border-radius: 7px;
+}
+
+/* ================= BUTTONS ================= */
+
+.create-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    margin-bottom: 20px;
+    padding: 10px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.create-btn:hover {
+    background: #1d4ed8;
+}
+
+.btn {
+    border: none;
+    padding: 7px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    color: white;
+}
+
+.btn-edit {
+    background: #2563eb;
+}
+
+.btn-edit:hover {
+    background: #1d4ed8;
+}
+
+.btn-toggle {
+    background: #334e70;
+}
+
+.btn-toggle:hover {
+    background: #416286;
+}
+
+.btn-delete {
+    background: #dc3545;
+}
+
+.btn-delete:hover {
+    background: #b91c2b;
+}
+
+/* ================= FORM ================= */
+
+.user-form {
+    background: #12223b;
+    border: 1px solid #294466;
+    border-radius: 9px;
+    padding: 20px;
+    margin-bottom: 18px;
+}
+
+.user-form h3 {
+    margin-top: 0;
+    color: #f1f5fb;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    color: #9fb2cd;
+    font-size: 13px;
+}
+
+.form-group input,
+.form-group select {
+    background: #0d1a2e;
+    border: 1px solid #294466;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #3b82f6;
+}
+
+.form-actions {
+    margin-top: 16px;
+    display: flex;
+    gap: 8px;
+}
+
+.save-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 9px 17px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background: #334155;
+    color: white;
+    border: none;
+    padding: 9px 17px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ================= TABLE ================= */
+
+.table-container {
+    background: #101e34;
+    border: 1px solid #213957;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.users-table th {
+    background: #172b4a;
+    color: #b9c9df;
+    text-align: left;
+    padding: 15px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.users-table td {
+    padding: 11px 15px;
+    border-top: 1px solid #1d334f;
+    color: #d5e0ef;
+    font-size: 14px;
+}
+
+.users-table tr:hover {
+    background: #142641;
+}
+
+/* ================= BADGES ================= */
+
+.role-badge {
+    display: inline-block;
+    padding: 5px 11px;
+    border-radius: 20px;
+    background: #29466c;
+    color: #dbeafe;
+    font-size: 12px;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.status-badge.active {
+    background: #064e3b;
+    color: #6ee7b7;
+}
+
+.status-badge.inactive {
+    background: #4b5563;
+    color: #d1d5db;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+/* ================= ACTIONS ================= */
+
+.actions {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .admin-sidebar {
+        width: 180px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .users-table {
+        min-width: 850px;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .admin-sidebar {
+        display: none;
+    }
+
+    .admin-main {
+        padding: 15px;
+    }
+
+    .user-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .create-btn {
+        width: 100%;
+    }
+
+    .admin-title h1 {
+        font-size: 24px;
+    }
+}

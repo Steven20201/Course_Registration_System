@@ -9,7 +9,7 @@ const roleMiddleware = require('../middleware/roleMiddleware');
 router.post('/advisor', authMiddleware, roleMiddleware('admin'), createAdvisor);
 
 // GET all users
-router.get('/', authMiddleware, roleMiddleware('admin'), getAllUsers);
+router.get('/', authMiddleware, roleMiddleware('admin', 'advisor'), getAllUsers);
 
 // POST create a new user
 router.post('/', authMiddleware, roleMiddleware('admin'), createUser);

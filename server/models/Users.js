@@ -36,6 +36,11 @@ const userSchema = new mongoose.Schema({
         trim: true,
     },
 
+    mustChangePassword: {
+    type: Boolean,
+    default: true, 
+    },
+
     active: {
         type: Boolean,
         default: true,

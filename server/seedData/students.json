@@ -1,0 +1,1209 @@
+[
+  {
+    "name": "Ayla",
+    "email": "Ayla@gmail.com",
+    "records": [
+      {
+        "courseCode": "ENG101",
+        "term": "2023-1",
+        "grade": "F"
+      },
+      {
+        "courseCode": "CSC420",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "SOC221",
+        "term": "2023-1",
+        "grade": "W"
+      },
+      {
+        "courseCode": "CSC102",
+        "term": "2025-1",
+        "grade": "D+"
+      },
+      {
+        "courseCode": "CSC224",
+        "term": "2025-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "CSC368",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC231",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC254",
+        "term": "2025-1",
+        "grade": "A"
+      }
+    ],
+    "in_progress": [
+      {
+        "courseCode": "THA101",
+        "term": "2026-1"
+      },
+      {
+        "courseCode": "CSC220",
+        "term": "2026-1"
+      }
+    ]
+  },
+  {
+    "name": "Nikolai",
+    "email": "niko@gmail.com",
+    "records": [
+      {
+        "courseCode": "CSC441",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "PSY101",
+        "term": "2024-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "CSC240",
+        "term": "2023-1",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "STA101",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC102",
+        "term": "2025-1",
+        "grade": "C+"
+      },
+      {
+        "courseCode": "CSC343",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "ENG103",
+        "term": "2024-1",
+        "grade": "C"
+      },
+      {
+        "courseCode": "CSC475",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC365",
+        "term": "2025-1",
+        "grade": "A"
+      }
+    ],
+    "in_progress": [
+      {
+        "courseCode": "CSC220",
+        "term": "2026-1"
+      }
+    ]
+  },
+  {
+    "name": "Ronaldo",
+    "email": "ronaldo@gmail.com",
+    "records": [
+      {
+        "courseCode": "MIS103",
+        "term": "2024-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "CSC254",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC331",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "PSY101",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "MAT101",
+        "term": "2024-1",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "CSC479",
+        "term": "2024-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "CSC102",
+        "term": "2025-1",
+        "grade": "D+"
+      },
+      {
+        "courseCode": "CSC441",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC222",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC240",
+        "term": "2025-1",
+        "grade": "C"
+      }
+    ],
+    "in_progress": []
+  },
+  {
+    "name": "Captan",
+    "email": "rachaphonb@gmail.com",
+    "records": [
+      {
+        "courseCode": "CSC104",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC479",
+        "term": "2023-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "PSY101",
+        "term": "2023-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC231",
+        "term": "2023-1",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "CSC240",
+        "term": "2023-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "CSC475",
+        "term": "2023-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "CSC120",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC221",
+        "term": "2024-1",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "CSC222",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC365",
+        "term": "2025-1",
+        "grade": "A"
+      }
+    ],
+    "in_progress": []
+  },
+  {
+    "name": "Bobby",
+    "email": "bobB@gmail.com",
+    "records": [
+      {
+        "courseCode": "ENG103",
+        "term": "2023-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "CSC222",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC120",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC104",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "GEO101",
+        "term": "2023-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "CSC224",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC368",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC343",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC475",
+        "term": "2023-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "MAT102",
+        "term": "2024-1",
+        "grade": "A"
+      }
+    ],
+    "in_progress": []
+  },
+  {
+    "name": "Cucumber",
+    "email": "cucu@gmail.com",
+    "records": [
+      {
+        "courseCode": "ENG102",
+        "term": "2023-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC210",
+        "term": "2023-1",
+        "grade": "C"
+      },
+      {
+        "courseCode": "MIS103",
+        "term": "2023-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "PSY202",
+        "term": "2023-1",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "ENG103",
+        "term": "2023-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "CSC254",
+        "term": "2023-1",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "CSC479",
+        "term": "2023-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "MAT101",
+        "term": "2023-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC331",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "STA101",
+        "term": "2024-1",
+        "grade": "A"
+      }
+    ],
+    "in_progress": []
+  },
+  {
+    "name": "Demon",
+    "email": "Demon@gmail.com",
+    "records": [
+      {
+        "courseCode": "ENG102",
+        "term": "2023-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC420",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC120",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC104",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "ENG103",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC479",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC102",
+        "term": "2024-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "CSC221",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC222",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC475",
+        "term": "2025-1",
+        "grade": "A"
+      }
+    ],
+    "in_progress": []
+  },
+  {
+    "name": "Kappaboy",
+    "email": "kappy@gmail.com",
+    "records": [
+      {
+        "courseCode": "MAT102",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "ENG101",
+        "term": "2024-1",
+        "grade": "D+"
+      },
+      {
+        "courseCode": "CSC222",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC104",
+        "term": "2025-1",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "CSC224",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC102",
+        "term": "2025-1",
+        "grade": "C+"
+      },
+      {
+        "courseCode": "CSC254",
+        "term": "2025-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "CSC368",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC420",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC442",
+        "term": "2025-1",
+        "grade": "A"
+      }
+    ],
+    "in_progress": []
+  },
+  {
+    "name": "Zane",
+    "email": "zane@gmail.com",
+    "records": [
+      {
+        "courseCode": "CSC479",
+        "term": "2023-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC120",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "HIS101",
+        "term": "2023-1",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "CSC221",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC240",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC475",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC222",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC224",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC231",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC451",
+        "term": "2025-1",
+        "grade": "A"
+      }
+    ],
+    "in_progress": []
+  },
+  {
+    "name": "Alex",
+    "email": "alex@gmail.com",
+    "records": [
+      {
+        "courseCode": "CSC101",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC451",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC353",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC321",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC104",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC254",
+        "term": "2023-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC420",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC201",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC221",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC224",
+        "term": "2024-1",
+        "grade": "A"
+      }
+    ],
+    "in_progress": []
+  },
+  {
+    "name": "Bay",
+    "email": "Bay@gmail.com",
+    "records": [
+      {
+        "courseCode": "CSC201",
+        "term": "2023-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "CSC451",
+        "term": "2024-1",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "CSC331",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC343",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC104",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC421",
+        "term": "2025-1",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "CSC233",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC222",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC442",
+        "term": "2024-1",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "CSC101",
+        "term": "2024-1",
+        "grade": "A"
+      }
+    ],
+    "in_progress": []
+  },
+  {
+    "name": "Elysia",
+    "email": "abc123@gmail.com",
+    "records": [
+      {
+        "courseCode": "MIS103",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "ENG102",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC102",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC120",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC254",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "STA101",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC101",
+        "term": "2025-1",
+        "grade": "A"
+      }
+    ],
+    "in_progress": [
+      {
+        "courseCode": "CSC321",
+        "term": "2026-1"
+      },
+      {
+        "courseCode": "ENG103",
+        "term": "2026-1"
+      },
+      {
+        "courseCode": "CSC220",
+        "term": "2026-1"
+      }
+    ]
+  },
+  {
+    "name": "Maxim",
+    "email": "irf@mail.ru",
+    "records": [
+      {
+        "courseCode": "CSC476",
+        "term": "2025-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "CSC233",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC441",
+        "term": "2025-1",
+        "grade": "C"
+      },
+      {
+        "courseCode": "CSC442",
+        "term": "2024-1",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "CSC221",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC222",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC254",
+        "term": "2025-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "CSC477",
+        "term": "2025-1",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "ECO200",
+        "term": "2025-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "CSC104",
+        "term": "2025-1",
+        "grade": "B"
+      }
+    ],
+    "in_progress": []
+  },
+  {
+    "name": "Elara",
+    "email": "elara@gmail.com",
+    "records": [
+      {
+        "courseCode": "CSC441",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "ENG102",
+        "term": "2024-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "CSC442",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "ENG103",
+        "term": "2024-1",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "CSC120",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC221",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC222",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC479",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC353",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC368",
+        "term": "2025-1",
+        "grade": "A"
+      }
+    ],
+    "in_progress": []
+  },
+  {
+    "name": "Peter",
+    "email": "Peter@gmail.com",
+    "records": [
+      {
+        "courseCode": "ENG103",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC120",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC441",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "PSY202",
+        "term": "2025-1",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "CSC221",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC222",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC368",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC343",
+        "term": "2025-1",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "MAT102",
+        "term": "2025-1",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "STA101",
+        "term": "2025-1",
+        "grade": "B+"
+      }
+    ],
+    "in_progress": []
+  },
+  {
+    "name": "Bernardo",
+    "email": "Bernardo@gmail.com",
+    "records": [
+      {
+        "courseCode": "CSC220",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "ENG103",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC222",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "GEO101",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC421",
+        "term": "2025-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "CSC442",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC420",
+        "term": "2026-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC368",
+        "term": "2026-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC475",
+        "term": "2026-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC365",
+        "term": "2026-1",
+        "grade": "A"
+      }
+    ],
+    "in_progress": []
+  },
+  {
+    "name": "Zinn",
+    "email": "Zinn@gmail.com",
+    "records": [
+      {
+        "courseCode": "CSC475",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC220",
+        "term": "2024-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "CSC321",
+        "term": "2024-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "CSC104",
+        "term": "2024-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "CSC240",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC442",
+        "term": "3024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC368",
+        "term": "2024-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "MAT101",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC222",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC365",
+        "term": "2024-1",
+        "grade": "B"
+      }
+    ],
+    "in_progress": []
+  },
+  {
+    "name": "helloworld",
+    "email": "helloworld@gmail.com",
+    "records": [
+      {
+        "courseCode": "CSC120",
+        "term": null,
+        "grade": "A"
+      }
+    ],
+    "in_progress": []
+  },
+  {
+    "name": "Harper",
+    "email": "harper.n@test.com",
+    "records": [
+      {
+        "courseCode": "CSC102",
+        "term": "2023-2",
+        "grade": "D+"
+      },
+      {
+        "courseCode": "CSC343",
+        "term": "2023-1",
+        "grade": "D+"
+      },
+      {
+        "courseCode": "CSC321",
+        "term": "2025-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC254",
+        "term": "2025-1",
+        "grade": "C+"
+      }
+    ],
+    "in_progress": []
+  },
+  {
+    "name": "Jasper",
+    "email": "jasper.k@test.com",
+    "records": [
+      {
+        "courseCode": "CSC102",
+        "term": "2025-1",
+        "grade": "C"
+      },
+      {
+        "courseCode": "CSC201",
+        "term": "2023-1",
+        "grade": "C"
+      },
+      {
+        "courseCode": "CSC240",
+        "term": "2023-2",
+        "grade": "D+"
+      },
+      {
+        "courseCode": "CSC254",
+        "term": "2025-1",
+        "grade": "C+"
+      }
+    ],
+    "in_progress": []
+  },
+  {
+    "name": "Luna",
+    "email": "luna.w@test.com",
+    "records": [
+      {
+        "courseCode": "CSC477",
+        "term": "2024-2",
+        "grade": "B"
+      },
+      {
+        "courseCode": "MAT102",
+        "term": "2024-1",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "CSC343",
+        "term": "2023-2",
+        "grade": "D"
+      },
+      {
+        "courseCode": "CSC101",
+        "term": "2024-1",
+        "grade": "A"
+      },
+      {
+        "courseCode": "CSC224",
+        "term": "2023-1",
+        "grade": "C+"
+      }
+    ],
+    "in_progress": []
+  },
+  {
+    "name": "Milo",
+    "email": "milo.r@test.com",
+    "records": [
+      {
+        "courseCode": "CSC421",
+        "term": "2024-2",
+        "grade": "C"
+      },
+      {
+        "courseCode": "STA101",
+        "term": "2023-1",
+        "grade": "C+"
+      },
+      {
+        "courseCode": "CSC331",
+        "term": "2023-1",
+        "grade": "C"
+      },
+      {
+        "courseCode": "CSC103",
+        "term": "2024-1",
+        "grade": "D"
+      }
+    ],
+    "in_progress": []
+  },
+  {
+    "name": "Nova",
+    "email": "nova.s@test.com",
+    "records": [
+      {
+        "courseCode": "CSC441",
+        "term": "2023-2",
+        "grade": "D"
+      },
+      {
+        "courseCode": "MAT101",
+        "term": "2023-1",
+        "grade": "C+"
+      },
+      {
+        "courseCode": "CSC233",
+        "term": "2024-1",
+        "grade": "C+"
+      },
+      {
+        "courseCode": "CSC120",
+        "term": "2024-1",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "CSC103",
+        "term": "2024-1",
+        "grade": "B"
+      },
+      {
+        "courseCode": "CSC254",
+        "term": "2023-2",
+        "grade": "D+"
+      },
+      {
+        "courseCode": "CSC353",
+        "term": "2024-1",
+        "grade": "D+"
+      },
+      {
+        "courseCode": "CSC201",
+        "term": "2023-1",
+        "grade": "C"
+      }
+    ],
+    "in_progress": []
+  },
+  {
+    "name": "Oscar",
+    "email": "oscar.t@test.com",
+    "records": [
+      {
+        "courseCode": "PSY101",
+        "term": "2024-1",
+        "grade": "D+"
+      },
+      {
+        "courseCode": "CSC321",
+        "term": "2025-1",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "CSC224",
+        "term": "2024-1",
+        "grade": "D"
+      },
+      {
+        "courseCode": "CSC479",
+        "term": "2023-1",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "CSC442",
+        "term": "2023-1",
+        "grade": "D"
+      }
+    ],
+    "in_progress": []
+  },
+  {
+    "name": "Piper",
+    "email": "piper.d@test.com",
+    "records": [
+      {
+        "courseCode": "CSC451",
+        "term": "2023-2",
+        "grade": "D+"
+      },
+      {
+        "courseCode": "CSC343",
+        "term": "2024-2",
+        "grade": "C+"
+      },
+      {
+        "courseCode": "CSC120",
+        "term": "2024-2",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "CSC240",
+        "term": "2024-1",
+        "grade": "B+"
+      },
+      {
+        "courseCode": "MAT101",
+        "term": "2023-2",
+        "grade": "D+"
+      },
+      {
+        "courseCode": "CSC368",
+        "term": "2025-1",
+        "grade": "C"
+      }
+    ],
+    "in_progress": []
+  }
+]

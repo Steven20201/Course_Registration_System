@@ -1,0 +1,266 @@
+[
+  {
+    "code": "CSC101",
+    "title": "Information Technology Fundamentals",
+    "credits": 3,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC102",
+    "title": "Discrete Mathematics Structure",
+    "credits": 3,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC103",
+    "title": "Introduction to Data Structure and Algorithms Analysis",
+    "credits": 3,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC104",
+    "title": "Computer Organization",
+    "credits": 3,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC120",
+    "title": "Web Development I",
+    "credits": 2,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC201",
+    "title": "IT Service Desk & Incident Management",
+    "credits": 3,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC210",
+    "title": "Social and Professional Issues in Information Technology",
+    "credits": 1,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC220",
+    "title": "Web Development II",
+    "credits": 3,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC221",
+    "title": "Programming I",
+    "credits": 1,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC222",
+    "title": "Programming II",
+    "credits": 2,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC224",
+    "title": "Introduction to Data Science",
+    "credits": 2,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC231",
+    "title": "System Administration and Maintenance",
+    "credits": 3,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC233",
+    "title": "Introduction to Internet of Things",
+    "credits": 3,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC240",
+    "title": "Operating Systems",
+    "credits": 2,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC254",
+    "title": "Human Computer Interaction",
+    "credits": 2,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC321",
+    "title": "System Analysis, Design, and Implementation",
+    "credits": 1,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC331",
+    "title": "Introduction to 3D Modeling and Virtual Reality",
+    "credits": 3,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC343",
+    "title": "Mobile Application Development",
+    "credits": 3,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC353",
+    "title": "Machine Learning Foundation",
+    "credits": 3,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC365",
+    "title": "Software Quality Management",
+    "credits": 3,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC368",
+    "title": "Software Testing and Maintenance",
+    "credits": 3,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC420",
+    "title": "Information Assurance and Security I",
+    "credits": 2,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC421",
+    "title": "Information Assurance and Security II",
+    "credits": 3,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC441",
+    "title": "Database Management Systems I",
+    "credits": 2,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC442",
+    "title": "Database Management Systems II",
+    "credits": 2,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC451",
+    "title": "AWS Cloud Foundations",
+    "credits": 3,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC475",
+    "title": "Network I",
+    "credits": 2,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC476",
+    "title": "Network II",
+    "credits": 3,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC477",
+    "title": "Window Server",
+    "credits": 3,
+    "department": "Computer Science"
+  },
+  {
+    "code": "CSC479",
+    "title": "IT Planning and Project Management",
+    "credits": 3,
+    "department": "Computer Science"
+  },
+  {
+    "code": "ENG101",
+    "title": "Introduction to Academic Writing",
+    "credits": 2,
+    "department": "General Education"
+  },
+  {
+    "code": "ENG102",
+    "title": "Academic Writing",
+    "credits": 2,
+    "department": "General Education"
+  },
+  {
+    "code": "ENG103",
+    "title": "College English III",
+    "credits": 2,
+    "department": "General Education"
+  },
+  {
+    "code": "MIS103",
+    "title": "Computer Applications",
+    "credits": 1,
+    "department": "General Education"
+  },
+  {
+    "code": "PSY101",
+    "title": "General Psychology",
+    "credits": 1,
+    "department": "General Education"
+  },
+  {
+    "code": "PSY202",
+    "title": "Developmental Psychology",
+    "credits": 2,
+    "department": "General Education"
+  },
+  {
+    "code": "MAT101",
+    "title": "College Algebra I",
+    "credits": 1,
+    "department": "General Education"
+  },
+  {
+    "code": "MAT102",
+    "title": "Quantitative Methods for Business",
+    "credits": 1,
+    "department": "General Education"
+  },
+  {
+    "code": "STA101",
+    "title": "Introduction to Statistics",
+    "credits": 1,
+    "department": "General Education"
+  },
+  {
+    "code": "GEO101",
+    "title": "World Geography",
+    "credits": 1,
+    "department": "General Education"
+  },
+  {
+    "code": "HIS101",
+    "title": "Thai History and Culture",
+    "credits": 1,
+    "department": "General Education"
+  },
+  {
+    "code": "SOC221",
+    "title": "Business Culture and Current Issues in ASEAN",
+    "credits": 2,
+    "department": "General Education"
+  },
+  {
+    "code": "ECO200",
+    "title": "Introduction to Economics",
+    "credits": 3,
+    "department": "General Education"
+  },
+  {
+    "code": "THA101",
+    "title": "Elementary Thai I",
+    "credits": 3,
+    "department": "General Education"
+  }
+]

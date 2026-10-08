@@ -11,6 +11,10 @@ const getAllUsers = async (req, res) => {
             filter.role = req.query.role;
         }
 
+         if (req.user.role === 'advisor' && filter.role !== 'student') {
+            return res.status(403).json({ message: "Advisors can only view students" });
+        }
+        
         const users = await Users.find(filter)
             .select('-passwordHash');
 
@@ -56,7 +60,7 @@ const createUser = async (req, res) => {
             email,
             passwordHash,
             role: "student",
-
+            mustChangePassword: true,
             studentId: await generateStudentId()
         };
 
@@ -129,7 +133,7 @@ const createAdvisor = async (req, res) => {
 
 const updateUser = async (req, res) => {
     try {
-        const { name, email, role, } = req.body;
+        const { name, email, role, active } = req.body;
 
         const targetUser = await Users.findById(req.params.id);
 
@@ -151,12 +155,16 @@ const updateUser = async (req, res) => {
             }
         }
 
+        if (targetUser.role === "admin" && active !== undefined) {
+            return res.status(400).json({ message: "Admin accounts cannot be activated or deactivated" });
+        }
+
         // Update fields if provided
         if (name !== undefined) targetUser.name = name;
         if (email !== undefined) targetUser.email = email;
         if (role !== undefined) targetUser.role = role;
         if (active !== undefined) targetUser.active = active;
-        
+
         await targetUser.save();
 
         const userResponse = targetUser.toObject();

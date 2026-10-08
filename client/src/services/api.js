@@ -68,4 +68,71 @@ export const deleteUser = async(id) => {
     return res.data;
 }
 
+//For the advisor section, courses
+export const getAllCourses = async () => {
+    const res = await api.get('/courses');
+    return res.data;
+}
+
+//Offerings
+export const getAllOfferings = async (term) => {
+    const query = term ? `?term=${term}` : '';
+    const res = await api.get(`/offerings${query}`);
+    return res.data;
+};
+
+export const createOffering = async (data) => {
+    const res = await api.post(`/offerings`, data);
+    return res.data;
+}
+
+export const updateOffering = async (id, data) => {
+    const res = await api.patch(`/offerings/${id}`, data);
+    return res.data;
+}
+
+
+export const deleteOffering = async (id) => {
+    const res = await api.delete(`/offerings/${id}`);
+    return res.data;
+}
+
+export const getStudentRecord = async (studentId) => {
+    const res = await api.get(`/students/${studentId}/record`);
+    return res.data;
+};
+
+export const getEligibleCourses = async (studentId, term) => {
+    const res = await api.get(`/students/${studentId}/eligible?term=${term}`);
+    return res.data;
+};
+
+export const createRegistration = async (studentId, offeringId) => {
+    const res = await api.post('/registrations', {studentId, offeringId});
+    return res.data;
+}
+
+export const deleteRegistration = async (id) => {
+    const res = await api.delete(`/registrations/${id}`);
+    return res.data;
+}
+
+export const changePassword = async (newPassword) => {
+    const res = await api.patch('/auth/change-password', { newPassword });
+    return res.data;
+};
+
+//--- Student self-services ---
+export const getMyRegistrations = async () => {
+    const res = await api.get('/me/registrations');
+    return res.data;
+};
+
+export const getMyRecord = async () => {
+    const res = await api.get('/me/record');
+    return res.data;
+};
+
+
+
 export default api;

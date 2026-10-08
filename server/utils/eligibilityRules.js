@@ -5,18 +5,11 @@ const Registration = require('../models/Registration');
 
 const PASSING_GRADES = ['A', 'B+', 'B', 'C+', 'C', 'D+', 'D'];
 
-const getEligibileCourses = async (generateStudentId, term) => {
-    //Rule: Offered this term
-    const currentOfferings = await Offering.find({
-        term
-    }).populate('courseId');
+const getEligibleCourses = async (studentId, term) => {
+    const currentOfferings = await Offering.find({ term }).populate('courseId');
 
-    //Student's academic record
-    const studentRecords = await Record.find({ 
-        studentId
-    }).populate('courseId');
+    const studentRecords = await Record.find({ studentId }).populate('courseId');
 
-    //student's term registration
     const studentRegistrations = await Registration.find({
         studentId,
         term,
@@ -28,7 +21,7 @@ const getEligibileCourses = async (generateStudentId, term) => {
     const recordMap = {};
     studentRecords.forEach((rec) => {
         const courseIdStr = rec.courseId._id.toString();
-        if(!recordMap[courseIdStr]) {
+        if (!recordMap[courseIdStr]) {
             recordMap[courseIdStr] = [];
         }
         recordMap[courseIdStr].push(rec.grade);
@@ -37,18 +30,14 @@ const getEligibileCourses = async (generateStudentId, term) => {
     const eligibleList = [];
     const excludedList = [];
 
-    //Rules for Offering
     for (const offering of currentOfferings) {
         const course = offering.courseId;
         const courseIdStr = course._id.toString();
         const grades = recordMap[courseIdStr] || [];
-        
-        //Rule : F
-        const hasF = grades.includes('F');
-        //Rule: Already passed (D or better)
-        const hasPassed = grades.some((g)=> PASSING_GRADES.includes(g));
 
-        //Rule: Already passed
+        const hasF = grades.includes('F');
+        const hasPassed = grades.some((g) => PASSING_GRADES.includes(g));
+
         if (hasPassed && !hasF) {
             excludedList.push({
                 course,
@@ -58,18 +47,16 @@ const getEligibileCourses = async (generateStudentId, term) => {
             continue;
         }
 
-        //Rule: Seats available
         const seatsRemaining = offering.seats - offering.seatsTaken;
         if (seatsRemaining <= 0) {
             excludedList.push({
                 course,
                 offering,
-                reason:  'Full — 0 seats remaining',
+                reason: 'Full — 0 seats remaining',
             });
             continue;
         }
 
-        //Rule: No time clash
         const clash = registeredOfferings.find((existing) => {
             return (
                 existing.day === offering.day &&
@@ -78,7 +65,7 @@ const getEligibileCourses = async (generateStudentId, term) => {
             );
         });
         if (clash) {
-            excludedList.push ({
+            excludedList.push({
                 course,
                 offering,
                 reason: `Clashes with ${clash.day} ${clash.startTime}-${clash.endTime} (already registered)`,
@@ -86,20 +73,19 @@ const getEligibileCourses = async (generateStudentId, term) => {
             continue;
         }
 
-        eligibleList.push ({
-            course, 
-            offering, 
+        eligibleList.push({
+            course,
+            offering,
             retakeRequired: hasF,
-            seatsRemaining
+            seatsRemaining,
         });
     }
 
-    //Rule: F
     eligibleList.sort((a, b) => (b.retakeRequired ? 1 : 0) - (a.retakeRequired ? 1 : 0));
 
     return { eligible: eligibleList, excluded: excludedList };
 };
 
 module.exports = {
-    getEligibileCourses
+    getEligibleCourses,
 };

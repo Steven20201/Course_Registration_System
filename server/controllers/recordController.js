@@ -83,7 +83,7 @@ const getMyRecord = async (req, res) => {
             term: 1
         });
         
-        res.status(500).json(records);
+        res.status(200).json(records);
     } catch(error) {
         res.status(500).json({ message: error.message });
     }

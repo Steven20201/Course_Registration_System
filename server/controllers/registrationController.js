@@ -62,7 +62,7 @@ const createRegistration = async (req, res) => {
             const existing = reg.offeringId;
             return (
                 existing.day === offering.day && 
-                existing.startTime < offering.endTiem &&
+                existing.startTime < offering.endTime &&
                 existing.endTime > offering.startTime
             );
         });
@@ -93,7 +93,7 @@ const createRegistration = async (req, res) => {
 };
 
 //GET /api/registrations?studentId = ...term=... (Advisor role)
-const getAllRegistraions = async (req, res) => {
+const getAllRegistrations = async (req, res) => {
     try {
         const filter = {};
         if (req.query.studentId) filter.studentId = req.query.studentId;
@@ -121,7 +121,7 @@ const getMyRegistrations = async (req, res) => {
     try {
         const registrations = await Registration.find ({
             studentId: req.user.id,
-            status: 'registrated',
+            status: 'registered',
         }).populate({
             path: 'offeringId',
             populate: {
@@ -170,7 +170,7 @@ const deleteRegistration = async (req, res) => {
 
 module.exports = {
     createRegistration, 
-    getAllRegistraions,
+    getAllRegistrations ,
     getMyRegistrations,
     deleteRegistration
 }

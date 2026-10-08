@@ -1,6 +1,6 @@
 const express = require('express');
 const connectDB = require('./config/db');
-const { ROLES, GRADE_PASS, GRADE_FAIL, GRADE_WITHDRAWN } = require('./config/constants');
+
 const app = express();
 const userRoutes = require('./routes/UserRoute');
 const authRoutes = require('./routes/authRoutes');
@@ -23,7 +23,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/courses', courseRoutes);
 app.use('/api/offerings', offeringRoutes);
-app.use('/api/registrationRoutes', registrationRoutes)
+app.use('/api/registrations', registrationRoutes)
 app.use('/api/me', meRoutes);
 app.use('/api/records', recordRoutes);
 app.use('/api/students', studentRoutes);

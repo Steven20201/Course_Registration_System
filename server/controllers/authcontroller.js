@@ -55,6 +55,7 @@ const login = async (req, res) => {
                     name: user.name,
                     email: user.email,
                     role: user.role,
+                    mustChangePassword: user.mustChangePassword,
                 }
             });
 
@@ -65,6 +66,32 @@ const login = async (req, res) => {
 
 };
 
+const changePassword = async (req, res) => {
+    try {
+        const { newPassword } = req.body;
+
+        if (!newPassword || newPassword.length < 6) {
+            return res.status(400).json({ message: "New password must be at least 6 characters" });
+        }
+
+        const user = await Users.findById(req.user.id);
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        user.passwordHash = await bcrypt.hash(newPassword, 10);
+        user.mustChangePassword = false;
+        await user.save();
+
+        res.status(200).json({ message: "Password updated successfully" });
+    } catch (error) {
+        console.error('Error changing password:', error);
+        res.status(400).json({ message: error.message });
+    }
+};
+
+
 module.exports = {
-    login
+    login,
+    changePassword
 };
