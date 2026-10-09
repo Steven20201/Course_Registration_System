@@ -7,7 +7,6 @@ const api = axios.create({
 });
 
 
-// services/api.js ထဲမှာ response interceptor ထည့်
 api.interceptors.response.use(
     (response) => response,
     (error) => {

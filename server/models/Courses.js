@@ -20,8 +20,6 @@ const courseSchema = new mongoose.Schema({
     department: {
         type: String,
     }
-
-
 },
     {
         timestamps: true,
