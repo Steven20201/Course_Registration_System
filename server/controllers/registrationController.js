@@ -9,9 +9,9 @@ const createRegistration = async (req, res) => {
             studentId,
             offeringId
         } = req.body;
-        
+
         //check whether the StudentID and offeringID is filled
-        if(!studentId || !offeringId) {
+        if (!studentId || !offeringId) {
             return res.status(400).json({
                 message: "studentId and offeringId are required"
             });
@@ -34,7 +34,7 @@ const createRegistration = async (req, res) => {
 
         //There is any available seats or not
         if (offering.seatsTaken >= offering.seats) {
-            return res.status(400).json ({
+            return res.status(400).json({
                 message: "This section is full"
             });
         }
@@ -42,7 +42,7 @@ const createRegistration = async (req, res) => {
         //Duplicate registration check
         const existingRegistration = await Registration.findOne({
             studentId,
-            offeringId, 
+            offeringId,
             status: 'registered',
         });
         if (existingRegistration) {
@@ -53,7 +53,7 @@ const createRegistration = async (req, res) => {
 
         //Time clash check
         const studentRegistrations = await Registration.find({
-            studentId, 
+            studentId,
             term: offering.term,
             status: 'registered'
         }).populate('offeringId');
@@ -61,7 +61,7 @@ const createRegistration = async (req, res) => {
         const hasClash = studentRegistrations.some((reg) => {
             const existing = reg.offeringId;
             return (
-                existing.day === offering.day && 
+                existing.day === offering.day &&
                 existing.startTime < offering.endTime &&
                 existing.endTime > offering.startTime
             );
@@ -74,7 +74,7 @@ const createRegistration = async (req, res) => {
 
         //registration create
         const registration = await Registration.create({
-            studentId, 
+            studentId,
             offeringId,
             term: offering.term,
             status: 'registered',
@@ -108,7 +108,7 @@ const getAllRegistrations = async (req, res) => {
                     path: 'courseId'
                 }
             });
-            res.status(200).json(registrations);
+        res.status(200).json(registrations);
     } catch (error) {
         res.status(500).json({
             message: error.message
@@ -119,7 +119,7 @@ const getAllRegistrations = async (req, res) => {
 //GET /api/me/registrations (Student views own)
 const getMyRegistrations = async (req, res) => {
     try {
-        const registrations = await Registration.find ({
+        const registrations = await Registration.find({
             studentId: req.user.id,
             status: 'registered',
         }).populate({
@@ -141,7 +141,7 @@ const getMyRegistrations = async (req, res) => {
 const deleteRegistration = async (req, res) => {
     try {
         const registration = await Registration.findById(req.params.id);
-        if(!registration) {
+        if (!registration) {
             return res.status(404).json({
                 message: "Registration not found"
             });
@@ -159,7 +159,7 @@ const deleteRegistration = async (req, res) => {
         await registration.save();
 
         res.status(200).json({
-            message: "Registraion dropped successfully", registration 
+            message: "Registraion dropped successfully", registration
         });
     } catch (error) {
         res.status(400).json({
@@ -169,8 +169,8 @@ const deleteRegistration = async (req, res) => {
 };
 
 module.exports = {
-    createRegistration, 
-    getAllRegistrations ,
+    createRegistration,
+    getAllRegistrations,
     getMyRegistrations,
     deleteRegistration
 }

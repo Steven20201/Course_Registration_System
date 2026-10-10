@@ -1,11 +1,3 @@
-// seed.js (idempotent version)
-// Adds any missing admin/advisors/students/courses/offerings/records/registrations
-// WITHOUT touching or duplicating anything that's already in the database.
-// Safe to run multiple times — each record is checked individually by its
-// unique field (email for users, code for courses) before being created.
-//
-// Run with:  node seed.js
-
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 require("dotenv").config();
