@@ -45,7 +45,6 @@ async function seed() {
 
   const passwordHash = await bcrypt.hash(DEFAULT_PASSWORD, 10);
 
-  // --- 1. Admin (only create if NO admin exists at all) ---
   const existingAdmin = await Users.findOne({ role: "admin" });
   if (existingAdmin) {
     console.log(`Admin already exists (${existingAdmin.email}) — leaving as is.`);
@@ -60,7 +59,6 @@ async function seed() {
     console.log("Created admin:", admin.email);
   }
 
-  // --- 2. Advisors (create only the ones missing, by email) ---
   const advisors = [];
   for (const a of advisorsData) {
     let advisor = await Users.findOne({ email: a.email });
@@ -76,13 +74,12 @@ async function seed() {
     }
     advisors.push(advisor);
   }
-  // Fall back to any existing advisors in the DB if the JSON list is empty/missing
+
   if (advisors.length === 0) {
     const anyAdvisors = await Users.find({ role: "advisor" });
     advisors.push(...anyAdvisors);
   }
 
-  // --- 3. Courses (create only the ones missing, by code) ---
   const courseByCode = {};
   let newCourseCount = 0;
   for (const c of coursesData) {
@@ -100,7 +97,6 @@ async function seed() {
   }
   console.log(`Courses: ${newCourseCount} created, ${coursesData.length - newCourseCount} already existed`);
 
-  // --- 4. Students (create only the ones missing, by email) ---
   const students = [];
   let newStudentCount = 0;
   for (let i = 0; i < studentsData.length; i++) {
@@ -124,7 +120,6 @@ async function seed() {
   }
   console.log(`Students: ${newStudentCount} created, ${studentsData.length - newStudentCount} already existed`);
 
-  // --- 5. Records (create only if this student+course+term combo doesn't exist) ---
   let recordCount = 0;
   for (const { doc: student, raw } of students) {
     for (const r of raw.records) {
@@ -149,7 +144,6 @@ async function seed() {
   }
   console.log(`Created ${recordCount} new completed-course records`);
 
-  // --- 6. Offerings for the current term (create only if missing) ---
   const currentTermCodes = new Set();
   for (const { raw } of students) {
     for (const ip of raw.in_progress) currentTermCodes.add(ip.courseCode);
@@ -186,7 +180,6 @@ async function seed() {
   }
   console.log(`Offerings: ${newOfferingCount} created`);
 
-  // --- 7. Registrations (create only if this student+offering combo doesn't exist) ---
   let regCount = 0;
   for (const { doc: student, raw } of students) {
     for (const ip of raw.in_progress) {
