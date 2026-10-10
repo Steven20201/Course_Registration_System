@@ -71,7 +71,7 @@ Open **http://localhost:5173**. The API address is set in `client/src/services/a
 | Name | Student ID | Role |
 |---|---|---|
 | Khant Zaw Hein | 2403220009 | Team Leader / Back-end Developer |
-| Jeerachot Kaewkampol | __________ | Admin Dashboard Developer |
+| Jeerachot Kaewkampol | 2312260001 | Admin Dashboard Developer |
 | Chanon Kittikwangthong  | 2306270008 | Login Page & Authentication Developer |
 | Shein Yazar Hlaing | 2310240002 | Advisor Dashboard Developer |
 | Kyaw Zin Thiha | 2403010001 | Student Dashboard Developer |
