@@ -284,7 +284,6 @@
     cursor: pointer;
 }
 
-/* ================= TABLE ================= */
 
 .table-container {
     background: #101e34;
@@ -317,8 +316,6 @@
 .users-table tr:hover {
     background: #142641;
 }
-
-/* ================= BADGES ================= */
 
 .role-badge {
     display: inline-block;
@@ -355,8 +352,6 @@
     background: currentColor;
 }
 
-/* ================= ACTIONS ================= */
-
 .actions {
     display: flex;
     gap: 7px;
@@ -364,46 +359,3 @@
     justify-content: space-evenly;
 }
 
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 900px) {
-    .admin-sidebar {
-        width: 180px;
-    }
-
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .users-table {
-        min-width: 850px;
-    }
-
-    .table-container {
-        overflow-x: auto;
-    }
-}
-
-@media (max-width: 700px) {
-    .admin-sidebar {
-        display: none;
-    }
-
-    .admin-main {
-        padding: 15px;
-    }
-
-    .user-toolbar {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 12px;
-    }
-
-    .create-btn {
-        width: 100%;
-    }
-
-    .admin-title h1 {
-        font-size: 24px;
-    }
-}

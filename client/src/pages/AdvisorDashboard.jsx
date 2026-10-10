@@ -7,6 +7,7 @@ const AdvisorDashboard = () => {
     const { user, logout } = useAuth();
     const location = useLocation();
 
+    
     return (
         <div className="advisor-layout">
 

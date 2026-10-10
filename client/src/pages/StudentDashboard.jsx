@@ -171,9 +171,7 @@ const StudentDashboard = () => {
                                 {user?.name || 'Student'}
                             </span>
 
-                            <span className="dropdown-arrow">
-                                ▼
-                            </span>
+                           
                         </div>
 
                         <button

@@ -48,7 +48,7 @@ const Login = () => {
                     <h2>Welcome Back 👋</h2>
 
                     <p className="login-subtitle">
-                        Sign in to your course registration portal
+                        Login to Your Course Registration Portal
                     </p>
 
 

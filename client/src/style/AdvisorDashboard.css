@@ -414,35 +414,3 @@
     text-align: center;
     color: #7f8da3;
 }
-
-
-/* MOBILE */
-
-@media (max-width: 800px) {
-
-    .advisor-sidebar {
-        width: 70px;
-    }
-
-    .advisor-logo span,
-    .advisor-nav-item span {
-        display: none;
-    }
-
-    .advisor-content {
-        padding: 15px;
-    }
-
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .eligibility-controls {
-        flex-direction: column;
-    }
-
-    .eligibility-controls select {
-        width: 100%;
-    }
-
-}
