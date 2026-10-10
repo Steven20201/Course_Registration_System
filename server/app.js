@@ -17,7 +17,7 @@ const cors = require('cors');
 connectDB();
 
 app.use(express.json());
-app.use(cors()); // Enable CORS for all routes
+app.use(cors()); 
 // Routes
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
